@@ -4,6 +4,7 @@ import time
 import datetime
 
 def Init():
+	print('Intializing Pi and Camera Settings')
 	LED = 20
 	camera = picamera.PiCamera()
 	camera.resolution =(640,480)
@@ -14,17 +15,16 @@ def Record(camera,LED):
 	camera.start_recording(date + '.h264')
 
 	while (time.time() < t_end):
-		print('Recording')
+		continue
 	camera.stop_recording()
-
+	print('Camera has stopped recording')
+	
 def main():
     camera,LED = Init()
 
     while (True):
 
         if (True):
-            print('I am recording')
-	    time.sleep(1)
-	    Record(camera,LED)
+           Record(camera,LED)
 if __name__ == "__main__":
 	main()

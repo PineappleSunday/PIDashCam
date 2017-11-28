@@ -4,7 +4,7 @@ import time
 import datetime
 
 def Init():
-	print('Intializing Pi and Camera Settings')
+	print('Initializing Pi and Camera Settings')
 	LED = 20
 	camera = picamera.PiCamera()
 	camera.resolution =(640,480)

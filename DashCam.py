@@ -8,6 +8,8 @@ def Init():
 	LED = 20
 	camera = picamera.PiCamera()
 	camera.resolution =(640,480)
+	camera.hflip = True
+	camera.vflip = True
 	return camera,LED
 def Record(camera,LED):
 	date = datetime.datetime.now().strftime("%m-%d-%Y-%H-%M-%S")
